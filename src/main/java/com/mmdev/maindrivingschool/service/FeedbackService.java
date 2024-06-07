@@ -5,7 +5,6 @@ import com.mmdev.maindrivingschool.repository.FeedbackRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 
@@ -14,7 +13,6 @@ import java.util.List;
 public class FeedbackService {
 
 	private final FeedbackRepository feedbackRepository;
-	private final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
 
 	public Feedback createFeedback(Feedback feedback, String ipAddress) {
 		if (feedbackRepository.countByIpAddress(ipAddress) >= 2) {
