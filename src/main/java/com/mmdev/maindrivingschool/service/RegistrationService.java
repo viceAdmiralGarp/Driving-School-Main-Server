@@ -14,7 +14,7 @@ public class RegistrationService {
 
 	public void register(RegistrationForm form) {
 		SimpleMailMessage message = new SimpleMailMessage();
-		message.setTo("marchenkomatvey75@gmail.com");
+		message.setTo("tihonovvyacheslav636@gmail.com");
 		message.setSubject("New Registration");
 		message.setText("Name: " + form.getFullname() + "\nEmail: " + form.getEmail() + "\nPhone: " + form.getPhone());
 		emailSender.send(message);
